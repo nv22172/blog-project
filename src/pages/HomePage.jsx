@@ -7,6 +7,6 @@ const HomePage = () => {
       <MainLayout/>
     </div>
   )
-}
+};
 
 export default HomePage

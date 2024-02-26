@@ -1,27 +1,44 @@
-import React from 'react'
-import { images } from '../constants'
+import React from "react";
+import { images } from "../constants";
 
 const Header = () => {
   return (
-   <section>
-    <header>
+    <section>
+      <header className="container mx-auto px-5 flex justify-between py-4 item-center">
         <div>
-<img src={images.Logo} alt="logo"/>
+          <img src={images.Logo} alt="logo" />
         </div>
-        <div>
-<ul>
-    <li><a href="">Home</a></li>
-    <li><a href="">Articles</a></li>
-    <li><a href="">Pages</a></li>
-    <li><a href="">Pricing</a></li>
-    <li><a href="">FAQ</a></li>
-</ul>
+        <div className="flex gap-x-9 items-center">
+          <ul className="flex gap-x-5 font-semibold">
+            <li className="bg-red-500">
+              <a href="/" className="px-4 py-2">
+                Home
+              </a>
+              <span className="cursor-pointer text-blue-500 absolute transition-all duration-500 font-bold right-0 top-0 group-hover:right[90%] opacity-0 group-hover:opacity-100">
+                /
+              </span>
+            </li>
+            <li>
+              <a href="">Articles</a>
+            </li>
+            <li>
+              <a href="">Pages</a>
+            </li>
+            <li>
+              <a href="">Pricing</a>
+            </li>
+            <li>
+              <a href="">FAQ</a>
+            </li>
+          </ul>
 
-<button>Sign in</button>
+          <button className="border-2 border-blue-500 px-6 py-2 rounded-full text-blue-500 font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300">
+            Sign in
+          </button>
         </div>
-    </header>
-   </section>
-  )
-}
+      </header>
+    </section>
+  );
+};
 
-export default Header
+export default Header;
